@@ -1,0 +1,82 @@
+{
+  "$comment": "규칙 SSOT. 원천: docs/design.md, 해석 결정: docs/r0-context.md. 사용자 승인 없이 바꾸지 않는다.",
+  "version": 1,
+  "frame": { "width": 390, "height": 844 },
+  "colors": {
+    "ink": "#141414",
+    "ink-soft": "#262626",
+    "accent": "#0066ff",
+    "canvas": "#ffffff",
+    "on-primary": "#ffffff",
+    "canvas-soft": "#f3f3f3",
+    "field": "#f0f0f0",
+    "hairline-soft": "#f0f0f0",
+    "hairline": "#e0e0e0",
+    "text-muted": "#707070",
+    "text-faint": "#adadad",
+    "badge-overlay": "rgba(115,115,115,0.56)"
+  },
+  "radius": {
+    "allowed": [0, 16, 24, 9999],
+    "squircle_component": "app-icon-squircle",
+    "squircle_ratio": 0.3,
+    "squircle_tolerance": 0.5
+  },
+  "spacing": {
+    "allowed": [0, 4, 8, 12, 16, 24, 32, 48, 64]
+  },
+  "font": {
+    "families": ["Pretendard", "Pretendard Variable", "Noto Sans KR"],
+    "$families_note": "Noto Sans KR은 design.md 폴백 스택의 폰트. Figma MCP에서 Pretendard를 못 불러와 2026-09-30 사용자 승인으로 추가.",
+    "weights": [300, 400, 600, 700],
+    "letter_spacing": [0]
+  },
+  "shadow": {
+    "effect_types": ["DROP_SHADOW", "INNER_SHADOW"],
+    "allowed_components": ["segmented-control-active"]
+  },
+  "accent": {
+    "max_per_frame": 2,
+    "forbidden_components": ["button-primary", "button-outline", "button-pill-soft"]
+  },
+  "components": [
+    "button-primary",
+    "button-outline",
+    "button-pill-soft",
+    "pricing-card",
+    "pricing-card-featured",
+    "testimonial-card",
+    "faq-row",
+    "portrait-tile",
+    "text-input",
+    "text-input-focused",
+    "nav-pill",
+    "app-icon-squircle",
+    "brand-chip",
+    "badge-popular",
+    "badge-overlay",
+    "segmented-control",
+    "segmented-control-active",
+    "award-lockup",
+    "compare-table",
+    "footer",
+    "content-card",
+    "skill-card",
+    "list-row",
+    "badge-soft",
+    "badge-ink",
+    "filter-chip",
+    "filter-chip-active",
+    "tab-bar"
+  ],
+  "pii_patterns": {
+    "email": "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}",
+    "phone": "01[016789][- .]?\\d{3,4}[- .]?\\d{4}",
+    "rrn": "\\d{6}[- ]?[1-4]\\d{6}"
+  },
+  "gates": {
+    "G1": { "min_references_per_screen": 5, "url_must_contain": "uibowl" },
+    "G2": { "min_items_per_screen": 3 },
+    "G3": { "sale_keyword": "판매 신청", "seller_marker": "role: seller" }
+  }
+}

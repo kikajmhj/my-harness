@@ -1,0 +1,11 @@
+# Claude Code 개인 로컬 설정 (권한 허용 목록, MCP 서버)
+.claude/settings.local.json
+
+# 하네스 실행 결과 (Figma 파일 주소, 팀 플랜 ID 포함)
+runs/
+
+# 판정 스크립트 시험
+tests/
+
+# Python
+__pycache__/
